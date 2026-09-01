@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "ictfax": {
+      "command": "npx",
+      "args": ["-y", "ictfax-mcp"],
+      "env": {
+        "ICTFAX_BASE_URL": "https://your-ictfax/api",
+        "ICTFAX_USERNAME": "admin@example.com",
+        "ICTFAX_PASSWORD": "your-password"
+      }
+    }
+  }
+}

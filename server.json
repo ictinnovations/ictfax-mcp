@@ -1,0 +1,76 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.ictinnovations/ictfax-mcp",
+  "description": "List and track faxes on ICTFax, and send faxes when writes are enabled, over ICTCore REST.",
+  "repository": {
+    "url": "https://github.com/ictinnovations/ictfax-mcp",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "websiteUrl": "https://www.ictfax.org",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "ictfax-mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "ICTFAX_BASE_URL",
+          "description": "ICTCore REST base URL of your ICTFax server, normally ending in /api, e.g. https://your-ictfax/api.",
+          "isRequired": true,
+          "isSecret": false,
+          "format": "string"
+        },
+        {
+          "name": "ICTFAX_USERNAME",
+          "description": "API account email (ICTCore logs in by email).",
+          "isRequired": true,
+          "isSecret": false,
+          "format": "string"
+        },
+        {
+          "name": "ICTFAX_PASSWORD",
+          "description": "Password for the account.",
+          "isRequired": true,
+          "isSecret": true,
+          "format": "string"
+        },
+        {
+          "name": "ICTFAX_ACCOUNT_ID",
+          "description": "Account id to send faxes from. Defaults to 1.",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "number",
+          "default": "1"
+        },
+        {
+          "name": "ICTFAX_MCP_ALLOW_WRITE",
+          "description": "Unlocks uploading documents and sending faxes, which dials a real number and can cost money. When false those tools are not registered at all. Leave off unless you mean it.",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "ICTFAX_TIMEOUT_MS",
+          "description": "Per request timeout in milliseconds. Defaults to 30000.",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "number",
+          "default": "30000"
+        },
+        {
+          "name": "ICTFAX_TLS_INSECURE",
+          "description": "Skip TLS certificate verification. Only for a self-signed test server.",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "boolean",
+          "default": "false"
+        }
+      ]
+    }
+  ]
+}

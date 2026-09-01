@@ -1,0 +1,56 @@
+{
+  "name": "ictfax-mcp",
+  "version": "0.1.0",
+  "mcpName": "io.github.ictinnovations/ictfax-mcp",
+  "description": "Model Context Protocol server for ICTFax. Lets AI assistants list and track faxes and, with writes enabled, upload documents and send faxes over the ICTCore REST API.",
+  "type": "module",
+  "bin": {
+    "ictfax-mcp": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc --watch",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ictfax",
+    "ictcore",
+    "fax",
+    "fax-server",
+    "t38",
+    "voip",
+    "claude",
+    "ai-agent"
+  ],
+  "author": "Tahir Almas <tahir@ictinnovations.com> (https://ictinnovations.com)",
+  "license": "MIT",
+  "homepage": "https://github.com/ictinnovations/ictfax-mcp#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ictinnovations/ictfax-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ictinnovations/ictfax-mcp/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  }
+}
