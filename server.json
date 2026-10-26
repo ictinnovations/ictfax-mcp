@@ -6,13 +6,13 @@
     "url": "https://github.com/ictinnovations/ictfax-mcp",
     "source": "github"
   },
-  "version": "0.1.0",
+  "version": "0.1.1",
   "websiteUrl": "https://www.ictfax.org",
   "packages": [
     {
       "registryType": "npm",
       "identifier": "ictfax-mcp",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "transport": {
         "type": "stdio"
       },

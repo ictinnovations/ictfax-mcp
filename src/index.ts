@@ -24,7 +24,7 @@ try {
 if (cfg.tlsInsecure) process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 const server = new McpServer(
-  { name: "ictfax-mcp", version: "0.1.0" },
+  { name: "ictfax-mcp", version: "0.1.1" },
   {
     instructions:
       "List and track faxes on an ICTFax server over the ICTCore REST API. Start with ictfax_list_faxes, " +
